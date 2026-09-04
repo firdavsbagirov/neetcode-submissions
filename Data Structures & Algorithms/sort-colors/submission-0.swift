@@ -1,0 +1,22 @@
+class Solution {
+    func sortColors(_ nums: inout [Int]){
+        var counts = [0, 0, 0]
+        
+        nums.forEach { num in
+            counts[num] += 1
+        }
+        print(counts)
+        
+        var i = 0
+        
+        for n in 0..<counts.count {
+            for j in 0..<counts[n] {
+                nums[i] = n
+                i += 1
+            }
+        }
+        
+        print(nums)
+        
+    }
+}
